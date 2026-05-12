@@ -1,4 +1,4 @@
-colegas = ["Ana", "Bruno", "Carlos", "Diana", "Eduardo"]
+colegas = ["ana", "bruno", "carlos", "diana", "eduardo"]
 
-print(colegas[0])   # Ana
-print(colegas[-1])  # Eduardo
+print(colegas[0])   
+print(colegas[-1])  
