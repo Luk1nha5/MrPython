@@ -9,7 +9,6 @@ class produto:
         return novo_preco
 
 meu_produto = produto("teclado", 250.0)
-
 preco_com_desconto = meu_produto.desconto(10)
 
 print(f"produto: {meu_produto.nome}")
