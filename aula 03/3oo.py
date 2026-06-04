@@ -18,4 +18,4 @@ meu_carro.acelerar()
 meu_carro.frear()
 
 print(f"carro: {meu_carro.marca} {meu_carro.modelo}")
-print(f"velocidade final: {meu_carro.velocidade} km/h")
+print(f"velocidade final: {meu_carro.velocidade} kmh")
