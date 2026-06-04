@@ -3,7 +3,7 @@ class funcionario:
         self.nome = nome
         self.salario = salario
     def exibir(self):
-        print(f"funcionario: {self.nome} salário Base: {self.salario}")
+        print(f"funcionario: {self.nome} salario base: {self.salario}")
 
 class gerente(funcionario):
     def __init__(self, nome, salario, bonus):

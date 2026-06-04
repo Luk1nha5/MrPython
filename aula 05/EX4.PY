@@ -22,7 +22,5 @@ lista_pessoas = [
     professor("Diego", 34, 3211312.0),
     aluno("Beatriz", 17, "3211321")
 ]
-
-
 for pessoa in lista_pessoas:
     pessoa.apresentar()
