@@ -5,13 +5,12 @@ class carro:
         self.velocidade = 0
     def acelerar(self):
         self.velocidade = self.velocidade + 10
-
     def frear(self):
         self.velocidade = self.velocidade - 10
         if self.velocidade < 0:
             self.velocidade = 0
 
-meu_carro = carro("Chevrolet", "chevette")
+meu_carro = carro("chevrolet", "chevette")
 meu_carro.acelerar()
 meu_carro.acelerar()
 meu_carro.acelerar()

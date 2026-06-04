@@ -2,7 +2,6 @@ class produto:
     def __init__(self, nome, preco):
         self.nome = nome
         self.preco = preco
-
     def desconto(self, percentual):
         valor_desconto = self.preco * (percentual / 100)
         novo_preco = self.preco - valor_desconto

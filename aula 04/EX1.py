@@ -1,8 +1,7 @@
-class Produto:
+class produto:
     def __init__(self, nome, preco):
         self.__nome = nome
         self.__preco = preco
-
     def get_nome(self):
         return self.__nome
     def get_preco(self):
@@ -15,7 +14,7 @@ class Produto:
         else:
             print("erro: preço não pode ser negativo")
 
-prod = Produto("Caderno", 15.0)
+prod = produto("caderno", 15.0)
 prod.set_preco(-5)
 prod.set_preco(12.5)
 print(prod.get_nome(), "-", prod.get_preco())

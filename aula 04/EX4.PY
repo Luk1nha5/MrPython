@@ -7,7 +7,7 @@ class sensor:
         if -50 <= temperatura <= 150:
             self.__temperatura = temperatura
         else:
-            print("erro: temperatura fora do limite físico do sensor")
+            print("erro: temperatura fora do limite fisico do sensor")
 
     def status(self):
         if -50 <= self.__temperatura <= 80:
@@ -20,9 +20,9 @@ class sensor:
 s = sensor(25)
 
 s.set_temperatura(30)
-print(f"temperatura: {s.get_temperatura()} status: {s.status()}")
+print(f"temperatura: {s.get_temperatura()} status {s.status()}")
 s.set_temperatura(95)
-print(f"temperatura: {s.get_temperatura()} status: {s.status()}")
+print(f"temperatura: {s.get_temperatura()} status {s.status()}")
 s.set_temperatura(130)
-print(f"temperatura: {s.get_temperatura()} status: {s.status()}")
+print(f"temperatura: {s.get_temperatura()} status {s.status()}")
 s.set_temperatura(160)

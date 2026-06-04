@@ -2,7 +2,6 @@ class pessoa:
     def __init__(self, nome, idade):
         self.__nome = nome
         self.__idade = idade
-
     def get_nome(self):
         return self.__nome
     def get_idade(self):
@@ -17,11 +16,11 @@ class pessoa:
         if 0 <= idade <= 120:
             self.__idade = idade
         else:
-            print("erro: idade inválida")
+            print("erro: idade invalida")
 
     def apresentar(self):
         print(f"nome: {self.__nome} idade: {self.__idade}")
-        
+
 p = pessoa("Carlos", 20)
 p.set_nome("")
 p.set_idade(150)
