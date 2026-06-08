@@ -6,7 +6,7 @@ class animal:
 
 class cachorro(animal):
     def latir(self):
-        print(f"{self.nome} esta latindo: Au Au")
+        print(f"{self.nome} esta latindo Au Au")
 
 meu_cachorro = cachorro("Bob")
 meu_cachorro.comer()

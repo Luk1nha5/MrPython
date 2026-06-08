@@ -15,6 +15,5 @@ class piano(instrumento):
         print("piano: pi pi pi pi")
 
 instrumentos = [violao(), bateria(), piano()]
-
 for instrumento in instrumentos:
     instrumento.tocar()

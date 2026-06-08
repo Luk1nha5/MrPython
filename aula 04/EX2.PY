@@ -22,7 +22,6 @@ class pessoa:
         print(f"nome: {self.__nome} idade: {self.__idade}")
 
 p = pessoa("Carlos", 20)
-p.set_nome("")
 p.set_idade(150)
 p.set_idade(25)
 p.apresentar()

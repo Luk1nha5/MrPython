@@ -17,4 +17,4 @@ class quadrado(forma):
 
 formas = [triangulo(321, 123), quadrado(123), triangulo(1123, 312), quadrado(123)]
 for forma in formas:
-    print(f"Área da forma: {forma.area()}")
+    print(f"area: {forma.area()}")

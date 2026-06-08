@@ -2,12 +2,11 @@ class contabancaria:
     def __init__(self, titular):
         self.__titular = titular
         self.__saldo = 0
-
     def depositar(self, valor):
         if valor > 0:
             self.__saldo += valor
         else:
-            print("erro: o valor do depósito deve ser positivo")
+            print("erro: o valor do deposito deve ser positivo")
 
     def sacar(self, valor):
         if valor <= self.__saldo:
@@ -17,7 +16,6 @@ class contabancaria:
 
     def get_saldo(self):
         return self.__saldo
-
     def extrato(self):
         print(f"titular: {self.__titular} saldo atual: {self.__saldo}")
 

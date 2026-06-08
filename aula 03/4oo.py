@@ -4,7 +4,7 @@ class banco:
         self.saldo = saldo_inicial
     def depositar(self, valor):
         self.saldo = self.saldo + valor
-        print(f"depósito de {valor:.2f} realizado com sucesso")
+        print(f"deposito de {valor:.2f} realizado com sucesso")
 
     def sacar(self, valor):
         if valor <= self.saldo:
@@ -23,3 +23,4 @@ conta.extrato()
 conta.depositar(220) 
 conta.sacar(145) 
 conta.sacar(13000) 
+conta.extrato() 
