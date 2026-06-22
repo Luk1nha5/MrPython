@@ -62,13 +62,11 @@ class gerente(funcionario):
         return self.__bonus
     def calcular_salario(self):
         return self.get_salario_fixo() + self.__bonus
- 
- 
+
 ana   = CLT("Ana", "001", 3000.00)
 bruno = vendedor("Bruno", "002", 2000.00, 12000.00)
 carla = gerente("Carla", "003", 5000.00)
  
 funcionarios = [ana, bruno, carla]
- 
 for funcionario in funcionarios:
     funcionario.exibir()
