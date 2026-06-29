@@ -1,0 +1,28 @@
+1: Airfryer) A airfryer é o aplicativo a tomada o API e a rede
+elétrica o sistema do banco de dados, você não precisa
+entender de engenharia elétrica. O plug da tomada é o API.
+Você conecta a airfrayer ali e recebe a energia
+
+2:Para cada situação abaixo, indique qual verbo HTTP seria usado:
+a) Listar todos os produtos de uma loja: GET para solicitar e recuperar dados de um servidor
+
+b) Cadastrar um novo cliente: POST para enviar dados a um servidor para criar um novo recurso 
+
+c) Apagar uma conta de usuário: DELETE para apagar a conta de um usuário no servidor
+
+d) Atualizar o preço de um produto: PATCH para atualizar apenas uma parte do recurso
+
+3. O que significa a sigla CRUD? Escreva cada letra e o verbo HTTP correspondente.
+c) Creat(criar) VERBO HTTP GET
+r) Read(ler) VERBO HTTP GET
+u) Update(Atualizar) VERBO HTTP PUT
+d) Delte(Apagar) VERBO HTTP DELETE
+
+4. Escreva, no formato JSON, os dados de um produto com: id, nome, preço e se está disponível (true/false).
+
+{
+  "id": 1,
+  "nome": "coxinha",
+  "preco": 2,50,
+  "disponivel": true
+}
