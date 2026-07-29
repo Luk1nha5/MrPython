@@ -5,7 +5,7 @@ POST http://127.0.0.1:5000/produtos
 Content-Type: application/json
 
 {
-  "nome": "Teclado Mecânico",
+  "nome": "teclado mecanico",
   "preco": 250.00
 }
 
@@ -14,5 +14,5 @@ POST http://127.0.0.1:5000/produtos
 Content-Type: application/json
 
 {
-  "nome": "Mouse sem preço"
+  "nome": "mouse sem preco"
 }
