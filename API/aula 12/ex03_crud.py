@@ -1,4 +1,3 @@
-# API/aula 12/ex03_crud.py
 from flask import Flask, jsonify, request
 import sqlite3
 
@@ -34,7 +33,7 @@ def listar_tarefas():
 def criar_tarefa():
     nova = request.get_json()
     if not nova or "titulo" not in nova:
-        return jsonify({"erro": "O campo titulo e obrigatorio"}), 400
+        return jsonify({"erro": "titulo obrigatorio"}), 400
 
     feita = nova.get("feita", 0)
 
@@ -78,9 +77,9 @@ def apagar_tarefa(id):
     conexao.close()
 
     if afetadas == 0:
-        return jsonify({"erro": "Tarefa nao encontrada"}), 404
+        return jsonify({"erro": "tarefa nao encontrada"}), 404
 
-    return jsonify({"mensagem": "Tarefa apagada com sucesso"})
+    return jsonify({"mensagem": "tarefa deletada"})
 
 if __name__ == "__main__":
     criar_tabela()
