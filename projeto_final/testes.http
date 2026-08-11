@@ -1,0 +1,130 @@
+### ===========================================
+### TESTES - API Biblioteca
+### Rode o app.py antes de testar (python app.py)
+### ===========================================
+
+
+### ---------- AUTORES ----------
+
+### Criar autor 1
+POST http://127.0.0.1:5000/autores
+Content-Type: application/json
+
+{
+    "nome": "Machado de Assis",
+    "nacionalidade": "Brasileira"
+}
+
+### Criar autor 2
+POST http://127.0.0.1:5000/autores
+Content-Type: application/json
+
+{
+    "nome": "J.K. Rowling",
+    "nacionalidade": "Britânica"
+}
+
+### Criar autor sem livros (para testar o LEFT JOIN)
+POST http://127.0.0.1:5000/autores
+Content-Type: application/json
+
+{
+    "nome": "Autor Sem Livro",
+    "nacionalidade": "Brasileira"
+}
+
+### Tentar criar autor sem nome (deve dar 400)
+POST http://127.0.0.1:5000/autores
+Content-Type: application/json
+
+{
+    "nacionalidade": "Brasileira"
+}
+
+### Listar todos os autores
+GET http://127.0.0.1:5000/autores
+
+### Buscar autor pelo id (troque o 1 pelo id gerado)
+GET http://127.0.0.1:5000/autores/1
+
+### Buscar autor que não existe (deve dar 404)
+GET http://127.0.0.1:5000/autores/999
+
+### Atualizar autor
+PUT http://127.0.0.1:5000/autores/1
+Content-Type: application/json
+
+{
+    "nome": "Machado de Assis",
+    "nacionalidade": "Brasileiro"
+}
+
+### Apagar autor
+DELETE http://127.0.0.1:5000/autores/3
+
+
+### ---------- LIVROS ----------
+
+### Criar livro (troque autor_id pelo id real do autor)
+POST http://127.0.0.1:5000/livros
+Content-Type: application/json
+
+{
+    "titulo": "Dom Casmurro",
+    "ano_publicacao": 1899,
+    "autor_id": 1
+}
+
+### Criar outro livro
+POST http://127.0.0.1:5000/livros
+Content-Type: application/json
+
+{
+    "titulo": "Harry Potter e a Pedra Filosofal",
+    "ano_publicacao": 1997,
+    "autor_id": 2
+}
+
+### Tentar criar livro com autor inexistente (deve dar 400)
+POST http://127.0.0.1:5000/livros
+Content-Type: application/json
+
+{
+    "titulo": "Livro Fantasma",
+    "ano_publicacao": 2020,
+    "autor_id": 999
+}
+
+### Listar todos os livros
+GET http://127.0.0.1:5000/livros
+
+### Buscar livro pelo id
+GET http://127.0.0.1:5000/livros/1
+
+### Atualizar livro
+PUT http://127.0.0.1:5000/livros/1
+Content-Type: application/json
+
+{
+    "titulo": "Dom Casmurro",
+    "ano_publicacao": 1900,
+    "autor_id": 1
+}
+
+### Apagar livro
+DELETE http://127.0.0.1:5000/livros/2
+
+
+### ---------- ROTAS ESPECIAIS ----------
+
+### JOIN: livros com o nome do autor junto
+GET http://127.0.0.1:5000/livros-completo
+
+### Filtro por caminho: livros de um autor específico
+GET http://127.0.0.1:5000/autores/1/livros
+
+### Busca por query string (LIKE) - encontra "Dom Casmurro"
+GET http://127.0.0.1:5000/livros/busca?titulo=dom
+
+### Busca por query string - sem resultado
+GET http://127.0.0.1:5000/livros/busca?titulo=xyz

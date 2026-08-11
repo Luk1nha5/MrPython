@@ -7,7 +7,6 @@ def conectar():
     conexao.row_factory = sqlite3.Row
     return conexao
 
-
 def criar_tabelas():
     conexao = conectar()
 
@@ -30,7 +29,6 @@ def criar_tabelas():
     conexao.commit()
     conexao.close()
 
-
 def inserir_dados():
     conexao = conectar()
 
@@ -52,7 +50,6 @@ def inserir_dados():
 
     conexao.commit()
     conexao.close()
-
 
 if __name__ == "__main__":
     criar_tabelas()
