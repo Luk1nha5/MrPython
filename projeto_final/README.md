@@ -3,13 +3,13 @@
 API REST desenvolvida em Python com Flask e banco de dados SQLite.
 
 **Disciplina:** Programação no Desenvolvimento de Sistemas
-**Dupla:** [Nome do integrante 1] e [Nome do integrante 2]
+**Dupla:** Lucas Lemke e Giovanaa Ramalho
 
 ---
 
 ## 📋 Sobre o projeto
 
-Este sistema controla o acervo de uma biblioteca: quem escreveu o quê. Cada autor pode ter vários livros cadastrados, e cada livro está sempre ligado a um autor. Além do CRUD básico (cadastrar, editar, apagar e consultar), dá pra ver os livros já com o nome do autor junto (sem precisar procurar o id manualmente) e filtrar tanto por autor quanto por parte do título do livro.
+Este sistema controla o sistema de uma biblioteca. Cada autor pode ter vários livros cadastrados, e cada livro está ligado ao autor. O CRUD básico permite (cadastrar, editar, apagar e consultar), dá pra ver os livros já com o nome do autor junto ou filtrar tanto por autor quanto por parte do título do livro.
 
 ---
 
@@ -39,7 +39,7 @@ Este sistema controla o acervo de uma biblioteca: quem escreveu o quê. Cada aut
 ## 🚀 Como rodar o projeto
 
 ```bash
-# 1. Instalar o Flask (caso não tenha)
+# 1. Instalar o Flask
 pip install flask
 
 # 2. Rodar a API
@@ -63,7 +63,7 @@ O banco de dados (`biblioteca.db`) é criado automaticamente na primeira execuç
 | GET | `/autores/<id>` | Busca um autor pelo id |
 | POST | `/autores` | Cria um novo autor |
 | PUT | `/autores/<id>` | Atualiza um autor |
-| DELETE | `/autores/<id>` | Apaga um autor (e seus livros, por causa do CASCADE) |
+| DELETE | `/autores/<id>` | Apaga um autor |
 
 ### Tabela livros
 
@@ -80,7 +80,6 @@ O banco de dados (`biblioteca.db`) é criado automaticamente na primeira execuç
 | Método | Rota | O que faz |
 |--------|------|-----------|
 | GET | `/livros-completo` | Lista livros já com o nome do autor (JOIN) |
-| GET | `/autores-completo` | Lista autores com seus livros, inclusive os sem nenhum livro (LEFT JOIN – diferencial) |
 | GET | `/autores/<id>/livros` | Lista os livros de um autor específico (filtro por caminho) |
 | GET | `/livros/busca?titulo=x` | Busca livros por título, usando LIKE (filtro por query string) |
 
@@ -106,5 +105,5 @@ Content-Type: application/json
 
 ## 👥 Integrantes
 
-- [Nome 1] — [o que fez no projeto]
-- [Nome 2] — [o que fez no projeto]
+- Lucas Lemke — [CRUD autores]
+- Giovanna Ramalho — [ CRUD de livros]

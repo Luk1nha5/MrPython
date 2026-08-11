@@ -1,12 +1,10 @@
-### ===========================================
-### TESTES - API Biblioteca
-### Rode o app.py antes de testar (python app.py)
-### ===========================================
+### testes da API
 
 
-### ---------- AUTORES ----------
 
-### Criar autor 1
+### autores
+
+### criar autor 1
 POST http://127.0.0.1:5000/autores
 Content-Type: application/json
 
@@ -15,16 +13,16 @@ Content-Type: application/json
     "nacionalidade": "Brasileira"
 }
 
-### Criar autor 2
+### criar autor 2
 POST http://127.0.0.1:5000/autores
 Content-Type: application/json
 
 {
-    "nome": "J.K. Rowling",
-    "nacionalidade": "Britânica"
+    "nome": "Dalton Trevisan",
+    "nacionalidade": "Brasileira"
 }
 
-### Criar autor sem livros (para testar o LEFT JOIN)
+### criar autor sem livro
 POST http://127.0.0.1:5000/autores
 Content-Type: application/json
 
@@ -33,7 +31,7 @@ Content-Type: application/json
     "nacionalidade": "Brasileira"
 }
 
-### Tentar criar autor sem nome (deve dar 400)
+### tentar criar autor sem nome
 POST http://127.0.0.1:5000/autores
 Content-Type: application/json
 
@@ -41,16 +39,16 @@ Content-Type: application/json
     "nacionalidade": "Brasileira"
 }
 
-### Listar todos os autores
+### listar todos os autores
 GET http://127.0.0.1:5000/autores
 
-### Buscar autor pelo id (troque o 1 pelo id gerado)
+### buscar autor pelo id
 GET http://127.0.0.1:5000/autores/1
 
-### Buscar autor que não existe (deve dar 404)
+### buscar autor que não existe
 GET http://127.0.0.1:5000/autores/999
 
-### Atualizar autor
+### atualizar autor
 PUT http://127.0.0.1:5000/autores/1
 Content-Type: application/json
 
@@ -59,13 +57,13 @@ Content-Type: application/json
     "nacionalidade": "Brasileiro"
 }
 
-### Apagar autor
+### apagar autor
 DELETE http://127.0.0.1:5000/autores/3
 
 
-### ---------- LIVROS ----------
+### livros
 
-### Criar livro (troque autor_id pelo id real do autor)
+### Criar livro
 POST http://127.0.0.1:5000/livros
 Content-Type: application/json
 
@@ -75,33 +73,33 @@ Content-Type: application/json
     "autor_id": 1
 }
 
-### Criar outro livro
+### criar outro livro
 POST http://127.0.0.1:5000/livros
 Content-Type: application/json
 
 {
-    "titulo": "Harry Potter e a Pedra Filosofal",
+    "titulo": "Grande Sertão",
     "ano_publicacao": 1997,
     "autor_id": 2
 }
 
-### Tentar criar livro com autor inexistente (deve dar 400)
+### tentar criar livro sem autro
 POST http://127.0.0.1:5000/livros
 Content-Type: application/json
 
 {
-    "titulo": "Livro Fantasma",
+    "titulo": "livro nenhum",
     "ano_publicacao": 2020,
     "autor_id": 999
 }
 
-### Listar todos os livros
+### listar todos os livros
 GET http://127.0.0.1:5000/livros
 
-### Buscar livro pelo id
+### buscar livro pelo id
 GET http://127.0.0.1:5000/livros/1
 
-### Atualizar livro
+### atualizar livro
 PUT http://127.0.0.1:5000/livros/1
 Content-Type: application/json
 
@@ -111,20 +109,20 @@ Content-Type: application/json
     "autor_id": 1
 }
 
-### Apagar livro
+### apagar livro
 DELETE http://127.0.0.1:5000/livros/2
 
 
-### ---------- ROTAS ESPECIAIS ----------
+### rotas especiais 
 
-### JOIN: livros com o nome do autor junto
+### JOIN livros com o nome do autor junto
 GET http://127.0.0.1:5000/livros-completo
 
-### Filtro por caminho: livros de um autor específico
+### filtro por caminho livros de um autor específico
 GET http://127.0.0.1:5000/autores/1/livros
 
-### Busca por query string (LIKE) - encontra "Dom Casmurro"
+### busca por query string encontra dom casmurr
 GET http://127.0.0.1:5000/livros/busca?titulo=dom
 
-### Busca por query string - sem resultado
+### busca por query string sem resultado
 GET http://127.0.0.1:5000/livros/busca?titulo=xyz
